@@ -35,5 +35,6 @@ class SharingContext implements Context, SnippetAcceptingContext {
 	use AppConfiguration;
 
 	protected function resetAppConfigs() {
+		$this->modifyServerConfig('sharebymail', 'enforcePasswordProtection', 'no');
 	}
 }
